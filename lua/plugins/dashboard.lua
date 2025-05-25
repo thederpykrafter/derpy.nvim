@@ -89,14 +89,6 @@ return {
               action = 'lua require("oil").open(vim.fn.stdpath("config"))',
             },
             {
-              icon = '  ',
-              desc = 'Desktop NeoVim Config',
-              key = 'C',
-              key_format = ' %s', -- remove default surrounding `[]`
-              --action = 'Telescope find_files cwd=~/.config/nvim',
-              action = 'Oil ~/.config/nvim',
-            },
-            {
               icon = '󰩈  ',
               desc = 'Quit NeoVim',
               key = 'q',
