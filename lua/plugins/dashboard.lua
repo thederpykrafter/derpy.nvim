@@ -22,11 +22,11 @@ return {
       require('dashboard').setup({
         theme = 'doom',
         config = {
-          vim.cmd('hi DashboardHeader guifg=#7781da'),
-          vim.cmd('hi DashboardIcon guifg=#0D5C63'),
-          vim.cmd('hi DashboardDesc guifg=#D7D9CE'),
-          vim.cmd('hi DashboardKey guifg=#ff8700'),
-          vim.cmd('hi DashboardFooter guifg=#00FFCD'),
+          vim.api.nvim_set_hl(0, 'DashboardHeader', { link = 'FloatTitle' }),
+          vim.api.nvim_set_hl(0, 'DashboardIcon', { link = 'DiagnosticInfo' }),
+          vim.api.nvim_set_hl(0, 'DashboardDesc', { link = 'Label' }),
+          vim.api.nvim_set_hl(0, 'DashboardKey', { link = 'Identifier' }),
+          vim.api.nvim_set_hl(0, 'DashboardFooter', { link = 'Function' }),
           header = header, -- change header here
           center = {
             {
