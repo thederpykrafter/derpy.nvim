@@ -10,11 +10,12 @@ require('lazy').setup({
   checker = { enabled = true },
   change_detection = {
     enabled = true,
-    notify = false,
+    notify = true,
   },
 })
 
 local checker = require('lazy.manage.checker')
+---@diagnostic disable-next-line: duplicate-set-field, unused-local
 checker.report = function(notify) end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
