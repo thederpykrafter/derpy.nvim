@@ -9,19 +9,20 @@ return {
     },
   },
   {
+    'j-hui/fidget.nvim',
+    opts = {
+      notification = {
+        override_vim_notify = true,
+        window = {
+          winblend = 0,
+        },
+      },
+    },
+  },
+  {
     'neovim/nvim-lspconfig',
     dependencies = {
       'saghen/blink.cmp',
-      {
-        'j-hui/fidget.nvim',
-        opts = {
-          notification = {
-            window = {
-              winblend = 0,
-            },
-          },
-        },
-      },
     },
     opts = {
       servers = {
