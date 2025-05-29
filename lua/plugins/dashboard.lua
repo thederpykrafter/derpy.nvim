@@ -30,6 +30,13 @@ return {
           header = header, -- change header here
           center = {
             {
+              icon = '󰺲  ',
+              desc = 'Edit Todo list',
+              key = 'T',
+              key_format = ' %s',
+              action = 'edit ~/Todo.md',
+            },
+            {
               icon = '  ',
               desc = 'Recent Files',
               key = 'r',
