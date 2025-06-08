@@ -1,6 +1,7 @@
 require('core.bootstrap-lazy')
 require('core.options')
 require('core.keymaps')
+require('core.filetypes')
 
 require('lazy').setup({
   spec = {
