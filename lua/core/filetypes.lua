@@ -10,6 +10,6 @@ vim.filetype.add({
 -- set filetype for i3config files
 vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   group = vim.api.nvim_create_augroup('i3_config_detection', { clear = true }),
-  pattern = { '*/i3/config', '*/i3/config.d/*', '*/i3/*.config' },
+  pattern = { '*/i3/config', '*/i3/config.d/*', '*/i3/*.conf*' },
   command = 'set filetype=i3config',
 })
