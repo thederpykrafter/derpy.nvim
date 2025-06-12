@@ -15,15 +15,19 @@ return {
   -- setting the keybinding for LazyGit with 'keys' is recommended in
   -- order to load the plugin when the command is run for the first time
   keys = {
-    { '<leader>gg', '<cmd>LazyGit<cr>', desc = 'Lazy [G]it' },
+    {
+      '<leader>gg',
+      '<cmd>silent ! tmux new-window -n "LazyGit" lazygit<cr>',
+      desc = 'Lazy [G]it',
+    },
     {
       '<leader>gc',
-      '<cmd>LazyGitFilter<cr>',
+      '<cmd>silent ! tmux new-window -n "LazyGit Commits" lazygit -f ./<cr>',
       desc = '[G]it Project [C]ommits',
     },
     {
       '<leader>gx',
-      '<cmd>LazyGitConfig<cr>',
+      '<cmd>silent ! tmux new-window -n "LazyGit Config" nvim "`lazygit -cd`/config.yml"<cr>',
       desc = '[X] Lazy Git Config',
     },
   },
