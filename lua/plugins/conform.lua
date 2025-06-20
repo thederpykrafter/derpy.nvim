@@ -30,14 +30,22 @@ return {
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
-      zsh = { 'beautysh' },
-      bash = { 'beautysh' },
-      sh = { 'beautysh' },
+      zsh = { 'shfmt' },
+      bash = { 'shfmt' },
+      sh = { 'shfmt' },
       python = { 'black' },
     },
     formatters = {
-      beautysh = {
-        prepend_args = { '-i', '2', '-s', 'fnpar' },
+      shfmt = {
+        inherit = true,
+        command = 'shfmt',
+        prepend_args = {
+          '--apply-ignore',
+          '-ln=auto',
+          '-bn',
+          '-sr',
+          '-ci',
+        },
       },
     },
   },
