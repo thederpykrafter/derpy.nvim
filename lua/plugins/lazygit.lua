@@ -17,12 +17,12 @@ return {
   keys = {
     {
       '<leader>gg',
-      '<cmd>silent ! tmux new-window -n "LazyGit" lazygit<cr>',
+      '<cmd>silent ! tmux new-window -n "LazyGit" lazygit | lazygit<cr>',
       desc = 'Lazy [G]it',
     },
     {
       '<leader>gc',
-      '<cmd>silent ! tmux new-window -n "LazyGit Commits" lazygit -f ./<cr>',
+      '<cmd>silent ! tmux new-window -n "LazyGit Commits" lazygit -f ./ | lazygit -f ./<cr>',
       desc = '[G]it Project [C]ommits',
     },
     {
