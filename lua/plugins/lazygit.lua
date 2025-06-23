@@ -17,17 +17,17 @@ return {
   keys = {
     {
       '<leader>gg',
-      '<cmd>silent ! tmux new-window -n "LazyGit" lazygit | lazygit<cr>',
+      '<cmd>LazyGit<cr>',
       desc = 'Lazy [G]it',
     },
     {
       '<leader>gc',
-      '<cmd>silent ! tmux new-window -n "LazyGit Commits" lazygit -f ./ | lazygit -f ./<cr>',
+      '<cmd>LazyGitCommits<cr>',
       desc = '[G]it Project [C]ommits',
     },
     {
       '<leader>gx',
-      '<cmd>silent ! tmux new-window -n "LazyGit Config" nvim "`lazygit -cd`/config.yml"<cr>',
+      '<cmd>LazyGitConfig<cr>',
       desc = '[X] Lazy Git Config',
     },
   },
