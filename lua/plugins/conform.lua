@@ -36,19 +36,19 @@ return {
       python = { 'black' },
     },
     formatters = {
-      shfmt = {
-        inherit = true,
-        command = 'shfmt',
-        prepend_args = {
-          '-i',
-          '2',
-          '--apply-ignore',
-          '-ln=auto',
-          '-bn',
-          '-sr',
-          '-ci',
-        },
-      },
+      -- shfmt = {
+      --   inherit = true,
+      --   command = 'shfmt',
+      --   prepend_args = {
+      --     '-i',
+      --     '2',
+      --     '--apply-ignore',
+      --     '-ln=auto',
+      --     '-bn',
+      --     '-sr',
+      --     '-ci',
+      --   },
+      -- },
     },
   },
 }
