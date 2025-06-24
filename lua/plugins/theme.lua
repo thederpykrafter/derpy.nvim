@@ -1,4 +1,4 @@
-return {
+local tokyodark = {
   'tiagovla/tokyodark.nvim',
   opts = {
     transparent_background = true, -- set background to transparent
@@ -19,3 +19,26 @@ return {
     vim.cmd [[colorscheme tokyodark]]
   end,
 }
+
+local pywal = {
+  'uZer/pywal16.nvim',
+  -- for local dev replace with:
+  -- dir = '~/your/path/pywal16.nvim',
+  config = function() vim.cmd.colorscheme('pywal16') end,
+}
+
+local function file_exists(name)
+  local f = io.open(name, 'r')
+  if f ~= nil then
+    io.close(f)
+    return true
+  else
+    return false
+  end
+end
+
+if not file_exists('/home/thederpykrafter/.cache/wal') then
+  return tokyodark
+else
+  return { tokyodark, pywal }
+end
