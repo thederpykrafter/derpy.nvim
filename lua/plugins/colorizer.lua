@@ -17,4 +17,26 @@ return {
       mode = 'background', -- Set the display mode.
     })
   end,
+  keys = {
+    {
+      '<leader>da',
+      '<cmd>ColorizerAttachToBuffer<cr>',
+      desc = 'Atach Colorizer',
+    },
+    {
+      '<leader>dr',
+      '<cmd>ColorizerReloadAllBuffers<cr>',
+      desc = 'Reload Colorizer',
+    },
+    {
+      '<leader>dd',
+      '<cmd>ColorizerDetachFromBuffer<cr>',
+      desc = 'Detach Colorizer',
+    },
+    {
+      '<leader>tc',
+      '<cmd>ColorizerToggle<cr>',
+      desc = 'Toggle Colorizer',
+    },
+  },
 }
