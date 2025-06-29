@@ -40,5 +40,5 @@ end
 if not file_exists('/home/thederpykrafter/.cache/wal') then
   return tokyodark
 else
-  return { tokyodark, pywal }
+  return { pywal }
 end
